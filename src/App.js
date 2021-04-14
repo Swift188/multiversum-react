@@ -6,6 +6,8 @@ import Cart from './cart/Cart'
 import Contact from './contact/Contact'
 import About from './about/About'
 import ProductDetails from './detail/Detail'
+import Cookie from './policy/Cookie'
+import Privacy from './policy/Privacy'
 
 function App() {
     const [cart, setCart] = useState([])
@@ -102,7 +104,9 @@ function App() {
                 <Route path='/shop'>
                     <Shop addToCart={addToCart} />
                 </Route>
-                <Route path='/cart'></Route>
+                <Route path='/cart'>
+                    <Cart />
+                </Route>
                 <Route path='/contact'>
                     <Contact />
                 </Route>
@@ -111,6 +115,12 @@ function App() {
                 </Route>
                 <Route path='/product/:productId'>
                     <ProductDetails addToCart={addToCart} />
+                </Route>
+                <Route path='/cookie'>
+                    <Cookie />
+                </Route>
+                <Route path='/privacy'>
+                    <Privacy />
                 </Route>
                 <Route path='/'>
                     <Home />
@@ -142,57 +152,27 @@ function App() {
                                     voluptate quas.
                                 </p>
                             </div>
-
                             <div className='col-lg-3 col-md-6 mb-4 mb-md-0'>
                                 <h5 className='text-uppercase'>Links</h5>
 
                                 <ul className='list-unstyled mb-0'>
-                                    <li>
-                                        <a href='#!' className='text-white'>
-                                            Link 1
-                                        </a>
+                                    <li className='nav-item'>
+                                        <Link className='nav-link' to='/shop'>
+                                            Winkel
+                                        </Link>
                                     </li>
-                                    <li>
-                                        <a href='#!' className='text-white'>
-                                            Link 2
-                                        </a>
+                                    <li className='nav-item'>
+                                        <Link
+                                            className='nav-link'
+                                            to='/contact'
+                                        >
+                                            Contact
+                                        </Link>
                                     </li>
-                                    <li>
-                                        <a href='#!' className='text-white'>
-                                            Link 3
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href='#!' className='text-white'>
-                                            Link 4
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className='col-lg-3 col-md-6 mb-4 mb-md-0'>
-                                <h5 className='text-uppercase'>Links</h5>
-
-                                <ul className='list-unstyled mb-0'>
-                                    <li>
-                                        <a href='#!' className='text-white'>
-                                            Link 1
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href='#!' className='text-white'>
-                                            Link 2
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href='#!' className='text-white'>
-                                            Link 3
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href='#!' className='text-white'>
-                                            Link 4
-                                        </a>
+                                    <li className='nav-item'>
+                                        <Link className='nav-link' to='/about'>
+                                            Over ons
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
