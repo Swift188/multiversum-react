@@ -1,0 +1,36 @@
+.products {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .products {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.products .product {
+    flex-grow: 3;
+    padding: 15px;
+    flex: 100%;
+}
+
+.product-image {
+    display: flex;
+    height: 300px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image img {
+    max-width: 90%;
+}
+
+@media (min-width: 768px) {
+    .products .product {
+        flex: 33.33%;
+    }
+}

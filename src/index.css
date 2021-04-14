@@ -1,13 +1,139 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import '~mdb-ui-kit/css/mdb.min.css';
+
+.headImg {
+    width: 100%;
+    height: 500px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo {
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+.form-box {
+    max-width: 500px;
+    margin: auto;
+    padding: 50px;
+}
+
+.form-group {
+    padding: 10px;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.submit {
+    float: right;
+}
+
+.page-title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.input-green {
+    background-color: #1dd1a1;
+    color: white !important;
+}
+
+.input {
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0.125rem solid transparent;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    border: 0;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+    font-weight: 500;
+    line-height: 1.5;
+    width: 50px;
+}
+
+.spinner-holder {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    background: white;
+}
+
+.spinner-border {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+}
+
+.page-content {
+    margin-top: 50px;
+}
+
+.card.product .card-body img {
+    max-width: auto;
+}
+
+.carousel-item {
+    height: 500px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.card-title {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+.bg-dark,
+body {
+    background-color: #222f3e;
+}
+
+.header,
+footer,
+.bg-green {
+    background-color: #1dd1a1;
+}
+
+.color-dark {
+    color: #222f3e;
+}
+
+.color-green {
+    color: #1dd1a1;
+}
+
+.card-title {
+    color: #1dd1a1;
+    font-size: 20px;
+}
+
+.btn-green {
+    background-color: #1dd1a1;
+    color: white !important;
+}
+
+.btn-green:hover,
+.btn-green:focus {
+    background-color: #29ba93;
+}
+
+.btn-green:active:focus {
+    background-color: #2a856c;
 }

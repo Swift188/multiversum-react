@@ -1,0 +1,9 @@
+.input-search {
+    background-color: #1dd1a1;
+    color: white;
+}
+
+.input-search:focus {
+    background-color: white;
+    border: 1px solid #1dd1a1;
+}
