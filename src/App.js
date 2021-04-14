@@ -1,12 +1,17 @@
 import { useState, useEffect } from 'react'
-import Products from './common/Products'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import Home from './home'
 
 function App() {
   const [products, setProducts] = useState([])
 
-  useEffect(async () => {
-    const products = await fetchProducts()
-    setProducts(products)
+  useEffect(() => {
+    const getTasks = async () => {
+      const products = await fetchProducts()
+      setProducts(products)
+    }
+
+    getTasks()
   }, [])
 
   const fetchProducts = async () => {
@@ -17,7 +22,15 @@ function App() {
     return data.products
   }
 
-  return <Products products={products} />
+  return (
+    <Router>
+      <Switch>
+        <Route path='/'>
+          <Home products={products} />
+        </Route>
+      </Switch>
+    </Router>
+  )
 }
 
 export default App
