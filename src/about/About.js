@@ -1,14 +1,16 @@
 import React from 'react'
 import './About.css'
+import SplashImg from '../common/SplashImg'
 
 const About = () => {
     return (
         <>
+            <SplashImg
+                title='Over ons'
+                img='http://multiversumvr.nl/assets/img/lux-interaction-xL3xDwWx7_s-unsplash.jpg'
+                height='300px'
+            />
             <div className='container1'>
-                <div className='text-white text-center'>
-                    <h1>Over ons</h1>
-                </div>
-
                 <div className='container page-content'>
                     <div className='img'></div>
                     <div>

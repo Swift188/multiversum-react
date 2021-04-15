@@ -4,7 +4,7 @@ import Loader from '../common/Loader'
 
 const Detail = ({ addToCart }) => {
     const [product, setProduct] = useState()
-    const [qtty, setQtty] = useState()
+    const [qtty, setQtty] = useState(1)
     let { productId } = useParams()
 
     useEffect(() => {
@@ -18,19 +18,19 @@ const Detail = ({ addToCart }) => {
 
     const fetchProduct = async () => {
         const res = await fetch(
-            `http://localhost/dreamteam-vr-site/api/get_product.php?id=${productId}`
+            `http://multiversumvr.nl/api/get_product.php?id=${productId}`
         )
         const data = await res.json()
         return data
     }
 
     const onAdd = () => {
-        addToCart(product)
+        addToCart(product, qtty)
     }
 
     if (!product) return <Loader />
 
-    const imgUrl = `http://localhost/dreamteam-vr-site/assets/img/products/${product.imageUrl}`
+    const imgUrl = `http://multiversumvr.nl/assets/img/products/${product.imageUrl}`
 
     return (
         <div className='card'>
@@ -49,28 +49,6 @@ const Detail = ({ addToCart }) => {
                         <h4 className='text-black'>€{product.price}</h4>
 
                         <div className='row'>
-                            <div className='col-md-12'>
-                                <button
-                                    className='btn btn-green'
-                                    onclick='min()'
-                                    id='min'
-                                >
-                                    -
-                                </button>
-                                <input
-                                    className='input input-green'
-                                    id='cartNr'
-                                    type='text'
-                                    value='0'
-                                />
-                                <button
-                                    className='btn btn-green'
-                                    onclick='plus()'
-                                    id='plus'
-                                >
-                                    +
-                                </button>
-                            </div>
                             <div className='col-12 mt-3'>
                                 <button
                                     className='btn btn-green btn-lg'

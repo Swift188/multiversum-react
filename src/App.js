@@ -11,10 +11,42 @@ import Privacy from './policy/Privacy'
 
 function App() {
     const [cart, setCart] = useState([])
-    const addToCart = (item) => {
-        setCart((cart) => [...cart, item])
-        console.log(cart)
+    const addToCart = (item, qtty) => {
+        /*const newStuff = cart.map((product) =>
+            product.id === item.id
+                ? { ...product, qtty: qtty + product.qtty }
+                : product
+        )*/
+        let prodFound = false
+        let newStuff = cart.map((product) => {
+            if (product.id === item.id) {
+                prodFound = true
+                return { ...product, qtty: product.qtty + qtty }
+            }
+            return product
+        })
+
+        if (!prodFound) {
+            newStuff = [...cart, { ...item, qtty: qtty }]
+        }
+
+        //let newStuff = [...cart, (item.id = { ...item, qtty: qtty })]
+
+        /* const found = cart.filter((product) => {
+            return product.id.match(item.id)
+        })
+        const newStuff*/
+
+        setCart((cart) => newStuff)
+        window.localStorage.setItem('cart', JSON.stringify(newStuff))
     }
+
+    useEffect(() => {
+        if (localStorage.getItem('cart') !== null) {
+            setCart((cart) => JSON.parse(localStorage.getItem('cart')))
+        }
+        //console.log('SET CART')
+    }, [])
 
     return (
         <Router>
@@ -22,8 +54,9 @@ function App() {
                 <div className='container-fluid'>
                     <Link className='navbar-brand' to='/'>
                         <img
+                            alt='Multiversum'
                             className='logo'
-                            src='http://localhost/dreamteam-vr-site/assets/img/logo/Multiversum_logowit.png'
+                            src='http://multiversumvr.nl/assets/img/logo/Multiversum_logowit.png'
                         />
                     </Link>
                     <button
@@ -105,7 +138,7 @@ function App() {
                     <Shop addToCart={addToCart} />
                 </Route>
                 <Route path='/cart'>
-                    <Cart />
+                    <Cart cart={cart} />
                 </Route>
                 <Route path='/contact'>
                     <Contact />

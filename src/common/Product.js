@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 const Product = ({ product, addToCart }) => {
     const onAdd = () => {
-        addToCart(product)
+        addToCart(product, 1)
     }
 
-    const imgUrl = `http://localhost/dreamteam-vr-site/assets/img/products/${product.imageUrl}`
+    const imgUrl = `http://multiversumvr.nl/assets/img/products/${product.imageUrl}`
 
     return (
         <div className='product'>
