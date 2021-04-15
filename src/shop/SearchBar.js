@@ -1,13 +1,13 @@
 import React from 'react'
 
-const SearchBar = ({ keyword, setKeyword }) => {
+const SearchBar = ({ search, setSearch }) => {
     return (
         <input
             className='form-control input-search'
             key='prod-search'
-            value={keyword}
+            value={search}
             placeholder='Zoek een product'
-            onChange={(e) => setKeyword(e.target.value)}
+            onChange={(e) => setSearch(e.target.value)}
         />
     )
 }
