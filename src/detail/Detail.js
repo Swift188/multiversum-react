@@ -18,7 +18,7 @@ const Detail = ({ addToCart }) => {
 
     const fetchProduct = async () => {
         const res = await fetch(
-            `http://multiversumvr.nl/api/get_product.php?id=${productId}`
+            `https://multiversumvr.nl/api/get_product.php?id=${productId}`
         )
         const data = await res.json()
         return data
@@ -30,7 +30,7 @@ const Detail = ({ addToCart }) => {
 
     if (!product) return <Loader />
 
-    const imgUrl = `http://multiversumvr.nl/assets/img/products/${product.imageUrl}`
+    const imgUrl = `https://multiversumvr.nl/assets/img/products/${product.imageUrl}`
 
     return (
         <div className='card'>

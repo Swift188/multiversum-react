@@ -13,22 +13,27 @@
     background-attachment: fixed;
 }
 
-.splash_img h1 {
-    font-size: 72px;
+.splash_img * {
+    text-align: center;
 }
 
-.splash_img .splash_img p {
+.splash_img > h1 {
+    font-size: 48px;
+}
+
+.splash_img > .line {
+    background-color: white;
+    height: 3px;
+    width: 20%;
+    margin-bottom: 15px;
+}
+
+.splash_img > p {
     color: lightgrey;
 }
 
-@keyframes imgchange {
-    0% {
-        background-image: url('http://multiversumvr.nl/assets/img/lux-interaction-xL3xDwWx7_s-unsplash.jpg');
-    }
-    50% {
-        background-image: url('http://multiversumvr.nl/assets/img/stephan-sorkin-kCrwoHRWe8Y-unsplash.jpg');
-    }
-    100% {
-        background-image: url('http://multiversumvr.nl/assets/img/jessica-lewis-DeyfdybVQhA-unsplash.jpg');
+@media (min-width: 768px) {
+    .splash_img > h1 {
+        font-size: 72px;
     }
 }

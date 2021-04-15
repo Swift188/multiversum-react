@@ -12,6 +12,7 @@ const SplashImg = ({ title, subtitle, height, img }) => {
         <>
             <div className='splash_img' style={styles}>
                 <h1>{title.toUpperCase()}</h1>
+                <div className='line' />
                 <p>{subtitle}</p>
             </div>
         </>

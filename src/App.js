@@ -8,6 +8,7 @@ import About from './about/About'
 import ProductDetails from './detail/Detail'
 import Cookie from './policy/Cookie'
 import Privacy from './policy/Privacy'
+import Terms from './policy/Terms'
 
 function App() {
     const [cart, setCart] = useState([])
@@ -56,7 +57,7 @@ function App() {
                         <img
                             alt='Multiversum'
                             className='logo'
-                            src='http://multiversumvr.nl/assets/img/logo/Multiversum_logowit.png'
+                            src='https://multiversumvr.nl/assets/img/logo/Multiversum_logowit.png'
                         />
                     </Link>
                     <button
@@ -155,16 +156,20 @@ function App() {
                 <Route path='/privacy'>
                     <Privacy />
                 </Route>
+                <Route path='/terms'>
+                    <Terms />
+                </Route>
                 <Route path='/'>
                     <Home />
                 </Route>
             </Switch>
+
             <footer className='bg-green text-center text-white'>
-                <div className='container p-4'>
+                <div className='container p-3'>
                     <section className='mb-4'>
                         <a
                             className='btn btn-outline-light btn-floating m-1'
-                            href='#!'
+                            href='https://github.com/Swift188/multiversum-react'
                             role='button'
                         >
                             <i className='fab fa-github'></i>
@@ -172,42 +177,24 @@ function App() {
                     </section>
 
                     <section className=''>
-                        <div className='row'>
-                            <div className='col-md-6 mb-4 mb-md-0'>
-                                <h5 className='text-uppercase'>Informatie</h5>
-
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Sunt distinctio earum
-                                    repellat quaerat voluptatibus placeat nam,
-                                    commodi optio pariatur est quia magnam eum
-                                    harum corrupti dicta, aliquam sequi
-                                    voluptate quas.
-                                </p>
+                        <div className='footer-links'>
+                            <div className='link'>
+                                <Link to='/shop'>Winkel</Link>
                             </div>
-                            <div className='col-lg-3 col-md-6 mb-4 mb-md-0'>
-                                <h5 className='text-uppercase'>Links</h5>
-
-                                <ul className='list-unstyled mb-0'>
-                                    <li className='nav-item'>
-                                        <Link className='nav-link' to='/shop'>
-                                            Winkel
-                                        </Link>
-                                    </li>
-                                    <li className='nav-item'>
-                                        <Link
-                                            className='nav-link'
-                                            to='/contact'
-                                        >
-                                            Contact
-                                        </Link>
-                                    </li>
-                                    <li className='nav-item'>
-                                        <Link className='nav-link' to='/about'>
-                                            Over ons
-                                        </Link>
-                                    </li>
-                                </ul>
+                            <div className='link'>
+                                <Link to='/contact'>Contact</Link>
+                            </div>
+                            <div className='link'>
+                                <Link to='/about'>Over ons</Link>
+                            </div>
+                            <div className='link'>
+                                <Link to='/privacy'>Privacy beleid</Link>
+                            </div>
+                            <div className='link'>
+                                <Link to='/cookie'>Cookie beleid</Link>
+                            </div>
+                            <div className='link'>
+                                <Link to='/terms'>Algemene voorwaarden</Link>
                             </div>
                         </div>
                     </section>
@@ -217,7 +204,7 @@ function App() {
                     className='text-center p-3'
                     style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
                 >
-                    © 2021 Copyright:
+                    © 2021 Copyright: Multiversum
                 </div>
             </footer>
         </Router>

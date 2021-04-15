@@ -1,4 +1,4 @@
-/*import React, { useContext, useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 export function loginProvider() {
     const [loggedIn, setLoggedIn] = useState(false)
@@ -7,4 +7,3 @@ export function loginProvider() {
         setLoggedIn()
     }
 }
-*/

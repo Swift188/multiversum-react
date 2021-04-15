@@ -1,14 +1,59 @@
-.container1 {
+.contacts_container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
 }
 
-ul {
-    list-style-type: none;
-}
-
-.iframe {
+.maps_iframe {
     width: 100%;
     height: 450px;
+    border-radius: 10px;
+}
+
+.info > ul {
+    list-style: none;
+}
+
+.info > ul > li {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.info > ul .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: lightcyan;
+    margin-right: 15px;
+}
+
+.info > ul .icon > i {
+    font-size: 20px;
+    color: black;
+}
+
+@media (min-width: 768px) {
+    .maps_iframe {
+        width: 350px;
+        height: 350px;
+    }
+
+    .contacts_container {
+        flex-direction: row;
+    }
+
+    .contacts_container > .info {
+        flex-grow: 5;
+    }
+
+    .contacts_container > .maps {
+        flex-grow: 5;
+    }
 }

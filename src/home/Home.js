@@ -9,7 +9,7 @@ const index = () => {
             <SplashImg
                 title='Multiversum VR'
                 subtitle='dé plek voor de nieuwste, beste en best geprijsde VR brillen!'
-                img='http://multiversumvr.nl/assets/img/lux-interaction-xL3xDwWx7_s-unsplash.jpg'
+                img='https://multiversumvr.nl/assets/img/lux-interaction-xL3xDwWx7_s-unsplash.jpg'
             />
 
             <div className='splits'>

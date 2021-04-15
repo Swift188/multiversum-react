@@ -6,7 +6,7 @@ const Product = ({ product, addToCart }) => {
         addToCart(product, 1)
     }
 
-    const imgUrl = `http://multiversumvr.nl/assets/img/products/${product.imageUrl}`
+    const imgUrl = `https://multiversumvr.nl/assets/img/products/${product.imageUrl}`
 
     return (
         <div className='product'>
@@ -28,7 +28,7 @@ const Product = ({ product, addToCart }) => {
                             In winkelwagen + <b>€{product.price}</b>
                         </button>
                         <Link
-                            className='btn btn-primary btn-lg'
+                            className='btn btn-primary btn-lg all-center'
                             to={`/product/${product.id}`}
                         >
                             <i className='fas fa-chevron-right'></i>

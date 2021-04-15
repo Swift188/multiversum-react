@@ -7,7 +7,7 @@ const About = () => {
         <>
             <SplashImg
                 title='Over ons'
-                img='http://multiversumvr.nl/assets/img/lux-interaction-xL3xDwWx7_s-unsplash.jpg'
+                img='https://multiversumvr.nl/assets/img/lux-interaction-xL3xDwWx7_s-unsplash.jpg'
                 height='300px'
             />
             <div className='container1'>

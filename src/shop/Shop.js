@@ -28,7 +28,7 @@ const Shop = ({ addToCart }) => {
     }
 
     const fetchProducts = async () => {
-        const res = await fetch('http://multiversumvr.nl/api/get_products.php')
+        const res = await fetch('https://multiversumvr.nl/api/get_products.php')
         const data = await res.json()
         return data.products
     }

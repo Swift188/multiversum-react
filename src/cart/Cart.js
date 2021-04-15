@@ -5,13 +5,13 @@ const Cart = ({ cart }) => {
     cart.map((item) => (totalPrice += item.price * item.qtty))
 
     return (
-        <div className='container'>
+        <div className='container mb-5 mt-5'>
             <div className='products-cart'>
                 {cart.map((item) => (
                     <div key={item.id} class='product shadow-2'>
                         <div className='product-image'>
                             <img
-                                src={`http://multiversumvr.nl/assets/img/products/${item.imageUrl}`}
+                                src={`https://multiversumvr.nl/assets/img/products/${item.imageUrl}`}
                                 alt={item.name}
                             />
                         </div>
