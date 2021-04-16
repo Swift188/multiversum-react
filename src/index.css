@@ -98,6 +98,10 @@ h6,
     color: white;
 }
 
+p {
+    color: darkgray;
+}
+
 .bg-dark,
 body {
     background-color: #222f3e;
@@ -109,11 +113,11 @@ footer,
     background-color: #1dd1a1;
 }
 
-.color-dark {
+.text-dark {
     color: #222f3e;
 }
 
-.color-green {
+.text-green {
     color: #1dd1a1;
 }
 

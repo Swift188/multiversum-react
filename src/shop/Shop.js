@@ -36,7 +36,7 @@ const Shop = ({ addToCart }) => {
     if (!filtered) return <Loader />
 
     return (
-        <div className='container'>
+        <div className='container mb-5 mt-5'>
             <SearchBar search={search} setSearch={updateInput} />
             <Products products={filtered} addToCart={addToCart} />
         </div>

@@ -5,7 +5,7 @@ import './SplashImg.css'
 const SplashImg = ({ title, subtitle, height, img }) => {
     const styles = {
         height: height || '600px',
-        backgroundImage: `url(${img})`,
+        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5) ), url(${img})`,
     }
 
     return (
@@ -22,11 +22,14 @@ const SplashImg = ({ title, subtitle, height, img }) => {
 SplashImg.defaultProps = {
     title: '',
     subtitle: '',
+    height: '600px',
 }
 
 SplashImg.propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
+    height: PropTypes.string,
+    img: PropTypes.string.isRequired,
 }
 
 export default SplashImg

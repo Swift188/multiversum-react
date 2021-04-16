@@ -12,9 +12,10 @@ const index = () => {
                 img='https://multiversumvr.nl/assets/img/lux-interaction-xL3xDwWx7_s-unsplash.jpg'
             />
 
-            <div className='splits'>
+            <div className='container mb-5 mt-5'>
                 <div className='cards' id='cards1'>
                     <div>
+                        <h4>Wie zijn wij?</h4>
                         Wij zijn Multiversum, dé eerste fysieke Virtual Reality
                         winkel van Nederland. Wij zitten centraal gelegen in de
                         binnenstad van Utrecht aan de Steenweg, waar je onze VR
@@ -22,9 +23,7 @@ const index = () => {
                         Multiversum heeft het breedste aanbod aan VR Headsets en
                         accessoires. Bekijk het aanbod in onze gloednieuwe
                         webshop.
-                        <Link className='navbar-brand' to='/about'>
-                            Lees Meer
-                        </Link>
+                        <Link to='/about'>Lees Meer</Link>
                     </div>
 
                     <div id='img1'></div>
@@ -33,6 +32,7 @@ const index = () => {
                 <div className='cards'>
                     <div id='img2'></div>
                     <div>
+                        <h4>Vr brillen</h4>
                         Met een VR-bril duik je in de wondere wereld van Virtual
                         Reality! Zet een VR-bril op je hoofd en geniet van de
                         mooiste VR-applicaties en 360-graden video's. Kies voor

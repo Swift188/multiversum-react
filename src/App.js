@@ -13,13 +13,13 @@ import Terms from './policy/Terms'
 function App() {
     const [cart, setCart] = useState([])
     const addToCart = (item, qtty) => {
-        /*const newStuff = cart.map((product) =>
+        /*const newCart = cart.map((product) =>
             product.id === item.id
                 ? { ...product, qtty: qtty + product.qtty }
                 : product
         )*/
         let prodFound = false
-        let newStuff = cart.map((product) => {
+        let newCart = cart.map((product) => {
             if (product.id === item.id) {
                 prodFound = true
                 return { ...product, qtty: product.qtty + qtty }
@@ -28,18 +28,17 @@ function App() {
         })
 
         if (!prodFound) {
-            newStuff = [...cart, { ...item, qtty: qtty }]
+            newCart = [...cart, { ...item, qtty: qtty }]
         }
 
-        //let newStuff = [...cart, (item.id = { ...item, qtty: qtty })]
+        setCart((cart) => newCart)
+        window.localStorage.setItem('cart', JSON.stringify(newCart))
+    }
 
-        /* const found = cart.filter((product) => {
-            return product.id.match(item.id)
-        })
-        const newStuff*/
-
-        setCart((cart) => newStuff)
-        window.localStorage.setItem('cart', JSON.stringify(newStuff))
+    const removeFromCart = (item) => {
+        const newCart = cart.filter((product) => product.id !== item.id)
+        setCart(newCart)
+        window.localStorage.setItem('cart', JSON.stringify(newCart))
     }
 
     useEffect(() => {
@@ -136,10 +135,13 @@ function App() {
             </nav>
             <Switch>
                 <Route path='/shop'>
-                    <Shop addToCart={addToCart} />
+                    <Shop
+                        addToCart={addToCart}
+                        removeFromCart={removeFromCart}
+                    />
                 </Route>
                 <Route path='/cart'>
-                    <Cart cart={cart} />
+                    <Cart cart={cart} removeFromCart={removeFromCart} />
                 </Route>
                 <Route path='/contact'>
                     <Contact />

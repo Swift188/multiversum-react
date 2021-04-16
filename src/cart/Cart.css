@@ -42,9 +42,13 @@
 .products-cart > .product > .product-info > p {
 }
 
-.abc {
+.products-cart > .product > .product-actions {
     display: flex;
     justify-content: space-between;
+}
+
+.products-cart > .product > .product-actions * {
+    margin: 15px;
 }
 
 .totalPrice {
