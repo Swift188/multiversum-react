@@ -102,33 +102,6 @@ function App() {
                                     <i className='fas fa-shopping-cart'></i>
                                 </Link>
                             </li>
-                            <li className='nav-item me-3 me-lg-0 dropdown'>
-                                <a
-                                    className='nav-link dropdown-toggle'
-                                    id='navbarDropdown'
-                                    role='button'
-                                    data-mdb-toggle='dropdown'
-                                    aria-expanded='false'
-                                    href='#navbarDropdown'
-                                >
-                                    <i className='fas fa-user'></i>
-                                </a>
-                                <ul
-                                    className='dropdown-menu dropdown-menu-right'
-                                    aria-labelledby='navbarDropdown'
-                                >
-                                    <li>
-                                        <a
-                                            className='dropdown-item'
-                                            data-mdb-toggle='modal'
-                                            data-mdb-target='#exampleCentralModal3'
-                                            href='#exampleCentralModal3'
-                                        >
-                                            Login
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
                         </ul>
                     </div>
                 </div>

@@ -3,6 +3,12 @@ import './Cart.css'
 import Product from './Product'
 
 const Cart = ({ cart, removeFromCart }) => {
+    if (cart === null)
+        return (
+            <div className='alert alert-warning'>
+                Je hebt niks in je winkelmand
+            </div>
+        )
     let totalPrice = 0
     cart.map((item) => (totalPrice += item.price * item.qtty))
 

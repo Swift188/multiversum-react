@@ -4,13 +4,6 @@
     flex-wrap: wrap;
 }
 
-@media (min-width: 768px) {
-    .products {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-}
-
 .products .product {
     flex-grow: 3;
     padding: 15px;
@@ -30,6 +23,11 @@
 }
 
 @media (min-width: 768px) {
+    .products {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
     .products .product {
         flex: 33.33%;
     }
